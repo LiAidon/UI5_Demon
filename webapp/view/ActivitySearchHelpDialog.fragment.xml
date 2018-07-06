@@ -1,0 +1,22 @@
+<core:FragmentDefinition
+    xmlns:core="sap.ui.core" 
+    xmlns="sap.m" 
+    xmlns:mvc="sap.ui.core.mvc"
+	xmlns:form="sap.ui.layout.form"
+	xmlns:h="http://www.w3.org/1999/xhtml">
+		<SelectDialog
+		noDataText="No item Found"
+		title="Select Activity"
+		class="sapUiPopupWithPadding"
+		growingThreshold="5"
+		rememberSelections="false"
+		multiSelect="false"
+		items="{path : '/ActivityHelpSet'}"
+		search="_handleActivityHelpSearch"
+		confirm="_handleActivityHelpConfirm"
+		cancel="_handleActivityHelpClose">
+		<StandardListItem
+			title="{ActivityNumber}"
+			description="{ActivityDescription}" />
+	</SelectDialog>
+</core:FragmentDefinition>

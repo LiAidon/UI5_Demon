@@ -1,0 +1,67 @@
+<mvc:View
+	controllerName="ADTracker.controller.FSIterationBlock"
+	xmlns:l="sap.ui.layout"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m">
+	<Table id="idProductsTable"
+		inset="false"
+		items="{
+			path: 'products>/ProductCollection',
+			sorter: {
+				path: 'Name'
+			}
+		}">
+		<headerToolbar>
+			<Toolbar>
+				<Title text="Transport Requests List" level="H2"/>
+			</Toolbar>
+		</headerToolbar>
+		<columns>
+			<Column
+				width="12em">
+				<Text text="Product" />
+			</Column>
+			<Column
+				minScreenWidth="Tablet"
+				demandPopin="true">
+				<Text text="Supplier" />
+			</Column>
+			<Column
+				minScreenWidth="Tablet"
+				demandPopin="true"
+				hAlign="Right">
+				<Text text="Dimensions" />
+			</Column>
+			<Column
+				minScreenWidth="Tablet"
+				demandPopin="true"
+				hAlign="Center">
+				<Text text="Weight" />
+			</Column>
+			<Column
+				hAlign="Right">
+				<Text text="Price" />
+			</Column>
+		</columns>
+		<items>
+			<ColumnListItem>
+				<cells>
+					<ObjectIdentifier
+						title="{products>Name}"
+						text="{products>ProductId}"/>
+					<Text
+						text="{products>SupplierName}" />
+					<Text
+						text="{products>Width} x {products>Depth} x {products>Height} {products>DimUnit}" />
+					<ObjectNumber
+						number="{products>WeightMeasure}"
+						unit="{products>WeightUnit}"
+						state="Error" />
+					<ObjectNumber
+					number="{products>Price}"
+					unit="{products>CurrencyCode}" />
+				</cells>
+			</ColumnListItem>
+		</items>
+	</Table>
+</mvc:View>

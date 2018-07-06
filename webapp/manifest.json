@@ -1,0 +1,145 @@
+{
+	"_version": "1.1.0",
+	"sap.app": {
+		"_version": "1.1.0",
+		"id": "ADTracker",
+		"type": "application",
+		"i18n": "i18n/i18n.properties",
+		"title": "{{appTitle}}",
+		"description": "{{appDescription}}",
+		"applicationVersion": {
+			"version": "1.0.0"
+		},
+		"ach": "CA-UI5-DOC",
+		"dataSources": {
+			"mainService": {
+				"uri": "/sap/opu/odata/sap/ZADSAP_SRV/",
+				"type": "OData",
+				"settings": {
+					"odataVersion": "2.0",
+					"localUri": "model/metadata.xml"
+				}
+			}
+		},
+		"sourceTemplate": {
+			"id": "servicecatalog.connectivityComponent",
+			"version": "0.0.0"
+		}
+	},
+	"sap.ui": {
+		"_version": "1.1.0",
+		"technology": "UI5",
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		},
+		"supportedThemes": [
+			"sap_hcb",
+			"sap_bluecrystal"
+		]
+	},
+	"sap.ui5": {
+		"_version": "1.1.0",
+		"rootView": "ADTracker.view.App",
+		"dependencies": {
+			"minUI5Version": "1.30",
+			"libs": {
+				"sap.m": {},
+				"sap.ui.core": {},
+				"sap.ui.layout": {},
+				"sap.uxap": {}
+			}
+		},
+		"config": {
+			"fullWidth": false,
+			"devLocal": "/devItemsSet.json",
+			"devRemote": "/sap/opu/odata/sap/ZADSAP_SRV/"
+		},
+		"models": {
+			"i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"settings": {
+					"bundleName": "ADTracker.i18n.i18n"
+				}
+			},
+			"devmodel": {
+				"dataSource": "mainService",
+				"settings": {
+					"metadataUrlParams": {
+						"sap-documentation": "heading"
+					},
+					"defaultCountMode": "None"
+				}
+			}
+		},
+		"resources": {
+			"css": [
+				{
+					"uri": "css/style.css"
+				}
+			]
+		},
+		"routing": {
+			"config": {
+				"routerClass": "sap.m.routing.Router",
+				"viewType": "XML",
+				"viewPath": "ADTracker.view",
+				"controlId": "app",
+				"controlAggregation": "pages"
+			},
+			"routes": [
+				{
+					"pattern": "",
+					"name": "home",
+					"target": "home"
+				},
+				{
+					"pattern": "detail/{itemPath}",
+					"name": "detail",
+					"target": "detail"
+				},
+				{
+					"pattern": "users",
+					"name": "user",
+					"target": "user"
+				},
+				{
+					"pattern": "update/{updateitem}",
+					"name": "updated",
+					"target": "updated"
+				},
+				{
+					"pattern": "newItem",
+					"name": "new",
+					"target": "new"
+				}
+			],
+			"targets": {
+				"home": {
+					"viewName": "Home"
+				},
+				"detail": {
+					"viewName": "DevDetail"
+				},
+				"user": {
+					"viewName": "UserList"
+				},
+				"updated": {
+					"viewName": "DevItemUpdate"
+				},
+				"new": {
+					"viewName": "DevItemCreate"
+				}
+			}
+		},
+		"contentDensities": {
+			"compact": true,
+			"cozy": true
+		}
+	},
+	"sap.platform.abap": {
+		"uri": "/sap/bc/ui5_ui5/sap/zadsap/webapp",
+		"_version": "1.1.0"
+	}
+}

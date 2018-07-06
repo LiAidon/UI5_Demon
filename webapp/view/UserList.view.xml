@@ -1,0 +1,90 @@
+<mvc:View
+   controllerName="ADTracker.controller.UserList"
+   xmlns="sap.m"
+   xmlns:core="sap.ui.core"
+   xmlns:l="sap.ui.layout"
+   xmlns:mvc="sap.ui.core.mvc">
+   <Page showNavButton="true"
+		navButtonPress="onNavBack" id="page" title="User List" enableScrolling="true" design="Solid">
+       <content>
+          <Table
+                id="userList"
+                backgroundDesign="Solid"
+                inset="false"
+                mode="{userlistview>/mode}"
+				selectionChange="onUserSelected"
+	            headerText="{i18n>devListTitle}"
+	            items="{
+	               path : 'devmodel>/userRolesSet',
+	               sorter : {
+							path : 'role',
+							group: true
+						}
+	            }" >
+	            <headerToolbar>
+	               <Toolbar design="Solid">
+	                  <Button icon="sap-icon://add" type="Accept" press="onNewUser" visible="{userlistview>/actionVisible}"/>
+	                  <Button icon="sap-icon://edit" type="Emphasized" press="onChangeUser" visible="{userlistview>/actionVisible}"/>
+	                  <ToolbarSpacer/>
+	                  <SearchField width="50%" search="onSearchUserList"/>                                 
+	                          <Select
+	                                 id="groupSelect"
+	                                 change="onGroupChange"
+	                                 icon="sap-icon://group-2"
+	                                 type="IconOnly"
+	                                 selectedKey="None"
+	                                 autoAdjustWidth="true" >
+	                                 <core:Item
+	                                        key="None"
+	                                        text="{i18n>GroupByNone}"/>
+	                                 <core:Item
+	                                        key="role"
+	                                        text="{i18n>GroupByRole}"/>
+	                                 <core:Item
+	                                        key="userID"
+	                                        text="{i18n>GroupByUserID}"/>
+	                          </Select>
+	               </Toolbar>
+	            </headerToolbar>
+				<columns>
+				      <Column
+				             hAlign="Left"
+				             minScreenWidth="Tablet"                 
+				             demandPopin="true">
+				             <Text text="{i18n>columnRole}"/>
+				      </Column>
+				      <Column
+				             hAlign="Left"
+				             minScreenWidth="Tablet"                 
+				             demandPopin="true">
+				             <Text text="{i18n>columnUserID}"/>
+				      </Column>
+				      <Column>
+				             <Text text="{i18n>columnName}"/>
+				      </Column>
+				      <Column
+				             minScreenWidth="Tablet"
+				             demandPopin="true">
+				             <Text text="{i18n>columnTelephone}"/>
+				      </Column>
+				      <Column
+				             minScreenWidth="Tablet"
+				             demandPopin="true">
+				             <Text text="{i18n>columnMobilePhone}"/>
+				      </Column>
+				</columns>
+				<items>
+				      <ColumnListItem>
+				             <cells>
+				                    <ObjectIdentifier title="{devmodel>role}" emphasized="true"/>
+				                    <ObjectIdentifier title="{devmodel>userID}" emphasized="true"/>
+				                    <Text text="{devmodel>lastName},{devmodel>firstName}"/>
+				                    <Text text="{devmodel>telephone}"/>
+				                    <Text text="{devmodel>mobilephone}"/>
+				             </cells>
+				      </ColumnListItem>
+				</items>
+             </Table>
+		</content>
+	</Page>
+</mvc:View>

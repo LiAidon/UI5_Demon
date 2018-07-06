@@ -1,0 +1,14 @@
+<core:FragmentDefinition
+   xmlns="sap.m"
+   xmlns:core="sap.ui.core" >
+   <ViewSettingsDialog
+      confirm="onSortConfirm">
+      	<sortItems>
+      		<ViewSettingsItem text="Release Date" key="release" selected="true" />
+      		<ViewSettingsItem text="WRWK Number" key="WRWKNum" />
+      		<ViewSettingsItem text="Description" key="description" />
+      		<ViewSettingsItem text="Developer" key="developer"/>
+      		<ViewSettingsItem text="Overall Status" key="overallStatus"/>
+      	</sortItems>
+   </ViewSettingsDialog>
+</core:FragmentDefinition>

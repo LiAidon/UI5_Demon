@@ -1,0 +1,36 @@
+<mvc:View
+		controllerName="ADTracker.controller.Home"
+		xmlns="sap.m"
+		xmlns:core="sap.ui.core" 
+		xmlns:mvc="sap.ui.core.mvc">
+	<Page title="{i18n>homePageTitle}" 
+		enableScrolling = "true" backgroundDesign="Transparent">
+		<headerContent>
+		</headerContent>
+		<content>
+			<mvc:XMLView viewName="ADTracker.view.DevHeader"/>
+			<mvc:XMLView viewName="ADTracker.view.DevList"/>
+		</content>
+		
+		<footer>
+			<Toolbar>	
+				<Button icon="sap-icon://person-placeholder" text="Users" type="Emphasized"
+						press="onUserListPress"/>
+				<ToolbarSpacer />
+				<Button
+						type="Accept"
+						icon="sap-icon://add"
+						text="New"
+						press="onNewItemPress" 
+ 						visible="{homeView>/actionVisible}"/>
+				<ToolbarSpacer />
+				<Button
+						icon="sap-icon://pie-chart"
+						type="Emphasized"
+						text="Analyze"
+						enabled="false"
+						press="onAnalyze" />						
+			</Toolbar>
+		</footer>
+	</Page>
+</mvc:View>

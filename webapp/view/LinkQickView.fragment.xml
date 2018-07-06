@@ -1,0 +1,18 @@
+<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns="sap.m">
+	<Popover showHeader="false" contentWidth="500px" contentHeight="300px" placement="Bottom" >
+			<Page id="linkQickView" title="Link List">
+				<List id="linkQickViewList" items="{}" showUnread="true">
+					<StandardListItem
+					    id="linkQickViewListItem"
+						title="{path: 'devmodel>Link', formatter: '.formatter.decodeName'}"
+						description="{path: 'devmodel>Link', formatter: '.formatter.decodeURL'}"
+						tooltip="{path: 'devmodel>Link', formatter: '.formatter.decodeURL'}"
+						icon="sap-icon://open-folder"
+						type="Active"
+						press="_onOpenLink"
+						iconDensityAware="false"
+						iconInset="false" />
+				</List>
+			</Page>
+	</Popover>
+</core:FragmentDefinition>

@@ -1,0 +1,31 @@
+<mvc:View
+	controllerName="ADTracker.controller.ObjectsBlock"
+	xmlns:l="sap.ui.layout"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m">
+	<Table id="idObjects"
+		inset="false"
+		items="{}">
+		<columns>
+			<Column
+				width="12em">
+				<Text text="Object Type" />
+			</Column>
+			<Column
+				minScreenWidth="Tablet"
+				demandPopin="true">
+				<Text text="Object Name" />
+			</Column>
+		</columns>
+		<items>
+			<ColumnListItem id="idObjectsItem">
+				<cells>
+					<ObjectIdentifier
+						title="{devmodel>objectType}"/>
+					<Text
+						text="{devmodel>objectName}" />
+				</cells>
+			</ColumnListItem>
+		</items>
+	</Table>
+</mvc:View>

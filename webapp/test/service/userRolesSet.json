@@ -1,0 +1,82 @@
+[
+    {
+        "userID" : "XUB6",
+        "role" : "Developer",
+        "firstName" : "Bob",
+        "lastName" : "Xu",
+        "telephone" : "+86 21 3896 4616",
+        "mobilephone" : "+86 183 0195 7591"
+    },
+    {
+        "userID" : "XUB6",
+        "role" : "Code Reviewer",
+        "firstName" : "Bob",
+        "lastName" : "Xu",
+        "telephone" : "+86 21 3896 4616",
+        "mobilephone" : "+86 183 0195 7591"
+    },
+	{
+        "userID" : "CHENS",
+        "role" : "Functional Analyst",
+        "firstName" : "Chen",
+        "lastName" : "Shi",
+        "telephone" : "+86 21 3896 4616",
+        "mobilephone" : "+86 183 0195 7591"
+    },
+    {
+        "userID" : "FA01",
+        "role" : "Functional Analyst",
+        "firstName" : "Balala",
+        "lastName" : "Ding",
+        "telephone" : "+86 21 3896 4616",
+        "mobilephone" : "+86 183 0195 7591"
+    },
+    {
+        "userID" : "DENGXY",
+        "role" : "Developer",
+        "firstName" : "Darren",
+        "lastName" : "Deng",
+        "telephone" : "+86 21 3896 4616",
+        "mobilephone" : "+86 183 0195 7591"
+    },
+    {
+        "userID" : "DEV01",
+        "role" : "Developer",
+        "firstName" : "Aidon",
+        "lastName" : "Li",
+        "telephone" : "+86 21 3896 4616",
+        "mobilephone" : "+86 183 0195 7591"
+    },
+    {
+        "userID" : "XUB6",
+        "role" : "Team Lead",
+        "firstName" : "Bob",
+        "lastName" : "Xu",
+        "telephone" : "+86 21 3896 4616",
+        "mobilephone" : "+86 183 0195 7591"
+    },
+    {
+        "userID" : "CASC",
+        "role" : "Team Lead",
+        "firstName" : "Bill",
+        "lastName" : "Casciano",
+        "telephone" : "+86 21 3896 4616",
+        "mobilephone" : "+86 183 0195 7591"
+    },
+    {
+        "userID" : "CASC",
+        "role" : "Tech Lead",
+        "firstName" : "Bill",
+        "lastName" : "Casciano",
+        "telephone" : "+86 21 3896 4616",
+        "mobilephone" : "+86 183 0195 7591"
+    },
+    {
+        "userID" : "CASC",
+        "role" : "Code Reviewer",
+        "firstName" : "Bill",
+        "lastName" : "Casciano",
+        "telephone" : "+86 21 3896 4616",
+        "mobilephone" : "+86 183 0195 7591"
+    }
+]

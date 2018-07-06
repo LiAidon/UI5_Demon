@@ -1,0 +1,681 @@
+<edmx:Edmx
+    xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx"
+    xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"
+    xmlns:sap="http://www.sap.com/Protocols/SAPData" Version="1.0">
+    <edmx:DataServices m:DataServiceVersion="2.0">
+        <Schema
+            xmlns="http://schemas.microsoft.com/ado/2008/09/edm" Namespace="ZADSAP_SRV" xml:lang="en" sap:schema-version="1">
+            <EntityType Name="devItems" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="itmNum"/>
+                </Key>
+                <Property Name="ItegTestStartDate" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Integ testing start date" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="itmNum" Type="Edm.String" Nullable="false" MaxLength="16" sap:label="Item Number" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="releaseKey" Type="Edm.String" Nullable="false" MaxLength="20" sap:label="Release key" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="DeleteFlag" Type="Edm.String" Nullable="false" MaxLength="1" sap:label="Delete Falg" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Ymonth" Type="Edm.String" Nullable="false" MaxLength="6" sap:label="Year month" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="FSDaysDiff" Type="Edm.String" Nullable="false" MaxLength="2" sap:label="FS actual receive date vs mileStone date" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="WRWKNum" Type="Edm.String" Nullable="false" MaxLength="20" sap:label="WR/WK NUm" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="description" Type="Edm.String" Nullable="false" MaxLength="200" sap:label="Description" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="desginReceiveDate" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="When status change to &quot;Ready For Design&quot;" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="designAssignDate" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="When status change to &quot;Ready For Coding&quot;" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="devApproach" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Project Approach" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="codePercentage" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Coding progress" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="release" Type="Edm.String" Nullable="false" MaxLength="40" sap:label="Release" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="codeSDate" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Coding start date" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="system" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="System" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="codeCDate" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Coding complete date" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="RICEF" Type="Edm.String" Nullable="false" MaxLength="20" sap:label="RICEF Comp" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="codeReviewSendDate" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Send to code review date" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="estimateABAPDays" Type="Edm.String" Nullable="false" MaxLength="3" sap:label="ABAP Estimation Days" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="codeReviewPendDay" Type="Edm.String" Nullable="false" MaxLength="2" sap:label="Pending days for the code review" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="FSPromiseDate" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="FS Promise date" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="FSMileStoneDate" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="FS Milestone Date" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="codeReviewSDate" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Code review start date" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="FSReceiveDate" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="FS Actual Receive Da" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="codeReviewCDate" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Code review complete date" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="FSStatus" Type="Edm.String" Nullable="false" MaxLength="20" sap:label="FS Status" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="faFName" Type="Edm.String" Nullable="false" MaxLength="50" sap:label="Explanation" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="FSIterationNumber" Type="Edm.String" Nullable="false" MaxLength="2" sap:label="FS Iteration Number" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="FSLink" Type="Edm.String" Nullable="false" sap:label="FS Link" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="teamLeadFName" Type="Edm.String" Nullable="false" MaxLength="50" sap:label="Explanation" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="TADStatus" Type="Edm.String" Nullable="false" MaxLength="20" sap:label="TAD Status" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="techLeadFName" Type="Edm.String" Nullable="false" MaxLength="50" sap:label="Explanation" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="developerFName" Type="Edm.String" Nullable="false" MaxLength="50" sap:label="Explanation" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="TADLink" Type="Edm.String" Nullable="false" sap:label="TAD Link" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="codeReviewerFName" Type="Edm.String" Nullable="false" MaxLength="50" sap:label="Explanation" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="planCompleteDate" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Plan Complete Date" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="actualCompleteDate" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Actual Complete Date" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="TSStatus" Type="Edm.String" Nullable="false" MaxLength="20" sap:label="TS Status" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="TSLink" Type="Edm.String" Nullable="false" sap:label="TS Link" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="codeStatus" Type="Edm.String" Nullable="false" MaxLength="30" sap:label="Coding Status" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="codeReviewStatus" Type="Edm.String" Nullable="false" MaxLength="30" sap:label="Code review status" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="codeReviewIterationNum" Type="Edm.String" Nullable="false" MaxLength="2" sap:label="Code Review Iteratio" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="transportIterationNum" Type="Edm.String" Nullable="false" MaxLength="2" sap:label="Transport Iteration" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="transportCounter" Type="Edm.String" Nullable="false" MaxLength="2" sap:label="Transport Counter" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="IsTRTransported" Type="Edm.String" Nullable="false" MaxLength="1" sap:label="Is TR transported" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="IsDevFinished" Type="Edm.String" Nullable="false" MaxLength="1" sap:label="Is development finished" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="functionalAnalyst" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Functional Analyst" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="teamLead" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Team Lead" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="techLead" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Tech Lead" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="developer" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Developer" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="codeReviewer" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Code Reviewer" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="chargeCode" Type="Edm.String" Nullable="false" MaxLength="12" sap:label="Charge code" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="activity" Type="Edm.String" Nullable="false" MaxLength="4" sap:label="Activity" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="overallStatus" Type="Edm.String" Nullable="false" MaxLength="30" sap:label="Overall Status" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="createdBy" Type="Edm.String" Nullable="false" MaxLength="12" sap:label="Created by" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="createdOn" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Created on" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="createdAt" Type="Edm.String" Nullable="false" MaxLength="8" sap:label="Time" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="changedBy" Type="Edm.String" Nullable="false" MaxLength="12" sap:label="Changed by" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="changedOn" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Changed on" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="changedAt" Type="Edm.String" Nullable="false" MaxLength="8" sap:label="Time of change" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Comments" Type="Edm.String" Nullable="false" sap:label="Comments" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <NavigationProperty Name="objectListSet" Relationship="ZADSAP_SRV.listToObjects" FromRole="FromRole_listToObjects" ToRole="ToRole_listToObjects"/>
+                <NavigationProperty Name="iterationsSet" Relationship="ZADSAP_SRV.listToIterations" FromRole="FromRole_listToIterations" ToRole="ToRole_listToIterations"/>
+                <NavigationProperty Name="feedsSet" Relationship="ZADSAP_SRV.listToFeeds" FromRole="FromRole_listToFeeds" ToRole="ToRole_listToFeeds"/>
+                <NavigationProperty Name="crIterationSet" Relationship="ZADSAP_SRV.listToCodeReviewIteration" FromRole="FromRole_listToCodeReviewIteration" ToRole="ToRole_listToCodeReviewIteration"/>
+                <NavigationProperty Name="qcDefectsSet" Relationship="ZADSAP_SRV.listToQCDefects" FromRole="FromRole_listToQCDefects" ToRole="ToRole_listToQCDefects"/>
+                <NavigationProperty Name="qcTRListSet" Relationship="ZADSAP_SRV.listToQCTR" FromRole="FromRole_listToQCTR" ToRole="ToRole_listToQCTR"/>
+                <NavigationProperty Name="qcATCSet" Relationship="ZADSAP_SRV.listToQCATC" FromRole="FromRole_listToQCATC" ToRole="ToRole_listToQCATC"/>
+                <NavigationProperty Name="qcExemptionSet" Relationship="ZADSAP_SRV.listToQCExemptions" FromRole="FromRole_listToQCExemptions" ToRole="ToRole_listToQCExemptions"/>
+                <NavigationProperty Name="qcIterationSet" Relationship="ZADSAP_SRV.listToQCITR" FromRole="FromRole_listToQCITR" ToRole="ToRole_listToQCITR"/>
+                <NavigationProperty Name="transportsSet" Relationship="ZADSAP_SRV.listToTransport" FromRole="FromRole_listToTransport" ToRole="ToRole_listToTransport"/>
+                <NavigationProperty Name="fsIterationSet" Relationship="ZADSAP_SRV.listToFSIteration" FromRole="FromRole_listToFSIteration" ToRole="ToRole_listToFSIteration"/>
+                <NavigationProperty Name="atcListSet" Relationship="ZADSAP_SRV.listToATC" FromRole="FromRole_listToATC" ToRole="ToRole_listToATC"/>
+                <NavigationProperty Name="exempListSet" Relationship="ZADSAP_SRV.listToExemption" FromRole="FromRole_listToExemption" ToRole="ToRole_listToExemption"/>
+            </EntityType>
+            <EntityType Name="objectList" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="itmNum"/>
+                    <PropertyRef Name="transportNum"/>
+                    <PropertyRef Name="objectType"/>
+                    <PropertyRef Name="objectName"/>
+                </Key>
+                <Property Name="itmNum" Type="Edm.String" Nullable="false" MaxLength="16" sap:label="Item Number" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="transportNum" Type="Edm.String" Nullable="false" MaxLength="20" sap:label="Transport Number" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="objectType" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Object Type" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="objectName" Type="Edm.String" Nullable="false" MaxLength="50" sap:label="Object Name" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="iterations" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="itmNum"/>
+                    <PropertyRef Name="iterationtype"/>
+                    <PropertyRef Name="iterationNum"/>
+                </Key>
+                <Property Name="itmNum" Type="Edm.String" Nullable="false" MaxLength="16" sap:label="Item Number" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="iterationtype" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Iteration Type" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="iterationNum" Type="Edm.String" Nullable="false" MaxLength="3" sap:label="Iteration Number" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Itrdesc" Type="Edm.String" Nullable="false" MaxLength="40" sap:label="Text, 40 Characters Long" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Zzdate" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Character Field Length = 10" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Zztime" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Character Field Length = 10" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Zzname" Type="Edm.String" Nullable="false" MaxLength="12" sap:label="Char20" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="reason" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Reason" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="comments" Type="Edm.String" Nullable="false" sap:label="Comments" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="userRoles" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="userID"/>
+                    <PropertyRef Name="role"/>
+                </Key>
+                <Property Name="userID" Type="Edm.String" Nullable="false" MaxLength="20" sap:label="User ID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="role" Type="Edm.String" Nullable="false" MaxLength="20" sap:label="User Role" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="firstName" Type="Edm.String" Nullable="false" MaxLength="20" sap:label="First Name" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="lastName" Type="Edm.String" Nullable="false" MaxLength="20" sap:label="Last Name" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="telephone" Type="Edm.String" Nullable="false" MaxLength="20" sap:label="Telephone" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="mobilephone" Type="Edm.String" Nullable="false" MaxLength="20" sap:label="Mobile Phone Number" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="appConfiguration" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Type"/>
+                    <PropertyRef Name="Code"/>
+                </Key>
+                <Property Name="Type" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Config type" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Code" Type="Edm.String" Nullable="false" MaxLength="20" sap:label="Conf code" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Value" Type="Edm.String" Nullable="false" MaxLength="100" sap:label="Conf value" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="feeds" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Devnum"/>
+                    <PropertyRef Name="Notenum"/>
+                </Key>
+                <Property Name="Devnum" Type="Edm.String" Nullable="false" MaxLength="16" sap:label="Item Number" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Notenum" Type="Edm.String" Nullable="false" MaxLength="6" sap:label="note number" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Noteby" Type="Edm.String" Nullable="false" MaxLength="20" sap:label="who create the note" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Notedate" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="note date" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Notetime" Type="Edm.String" Nullable="false" MaxLength="8" sap:label="note time" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Note" Type="Edm.String" Nullable="false" sap:label="note content" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="headerAnalysis" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Item"/>
+                </Key>
+                <Property Name="Item" Type="Edm.String" Nullable="false" MaxLength="3" sap:label="Not used" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Value1" Type="Edm.Int32" Nullable="false" sap:label="Number" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Title3" Type="Edm.String" Nullable="false" MaxLength="30" sap:label="30 Characters" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Title1" Type="Edm.String" Nullable="false" MaxLength="30" sap:label="30 Characters" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Value2" Type="Edm.Int32" Nullable="false" sap:label="Number" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Title4" Type="Edm.String" Nullable="false" MaxLength="30" sap:label="30 Characters" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Title2" Type="Edm.String" Nullable="false" MaxLength="30" sap:label="30 Characters" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Value3" Type="Edm.Int32" Nullable="false" sap:label="Number" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Value4" Type="Edm.Int32" Nullable="false" sap:label="Number" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="atcList" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Devnum"/>
+                    <PropertyRef Name="ATCName"/>
+                    <PropertyRef Name="ATCUser"/>
+                </Key>
+                <Property Name="Devnum" Type="Edm.String" Nullable="false" MaxLength="16" sap:label="Item Number" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ATCName" Type="Edm.String" Nullable="false" MaxLength="16" sap:label="ATC Name" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ATCUser" Type="Edm.String" Nullable="false" MaxLength="12" sap:label="ATC User" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="P1" Type="Edm.String" Nullable="false" MaxLength="5" sap:label="P1 counter" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="P2" Type="Edm.String" Nullable="false" MaxLength="5" sap:label="P2 counter" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="P3" Type="Edm.String" Nullable="false" MaxLength="5" sap:label="P3 counter" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Cname" Type="Edm.String" Nullable="false" MaxLength="20" sap:label="Created by" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="exempList" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Devnum"/>
+                    <PropertyRef Name="Appuser"/>
+                    <PropertyRef Name="Objname"/>
+                </Key>
+                <Property Name="Devnum" Type="Edm.String" Nullable="false" MaxLength="16" sap:label="Item Number" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="State" Type="Edm.String" Nullable="false" MaxLength="4" sap:label="Exemption State" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Appuser" Type="Edm.String" Nullable="false" MaxLength="12" sap:label="Applicant" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Objname" Type="Edm.String" Nullable="false" MaxLength="40" sap:label="Object Name" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Reason" Type="Edm.String" Nullable="false" MaxLength="4" sap:label="Reason" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ApplComment" Type="Edm.String" Nullable="false" sap:label="Justification" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Approver" Type="Edm.String" Nullable="false" MaxLength="12" sap:label="Approver" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ApprComment" Type="Edm.String" Nullable="false" sap:label="Justification" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="crIteration" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Devnum"/>
+                    <PropertyRef Name="Iterationtype"/>
+                    <PropertyRef Name="Itrnum"/>
+                </Key>
+                <Property Name="Devnum" Type="Edm.String" Nullable="false" MaxLength="16" sap:label="Item Number" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Iterationtype" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Iteration Type" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Itrnum" Type="Edm.String" Nullable="false" MaxLength="3" sap:label="Iteration Number" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Reason" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Reason" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Itrcomm" Type="Edm.String" Nullable="false" sap:label="Comments" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Zzdate" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Character Field Length = 10" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Zztime" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Character Field Length = 10" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Zzname" Type="Edm.String" Nullable="false" MaxLength="20" sap:label="Char20" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Itrdesc" Type="Edm.String" Nullable="false" MaxLength="40" sap:label="Text, 40 Characters Long" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Function" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Function code" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="qcDefects" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Devnum"/>
+                    <PropertyRef Name="Defnum"/>
+                </Key>
+                <Property Name="Devnum" Type="Edm.String" Nullable="false" MaxLength="16" sap:label="Item Number" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Defnum" Type="Edm.String" Nullable="false" MaxLength="20" sap:label="Char20" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Description" Type="Edm.String" Nullable="false" MaxLength="100" sap:label="Text" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="qcTRList" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Devnum"/>
+                    <PropertyRef Name="Itrnum"/>
+                    <PropertyRef Name="qcTr"/>
+                    <PropertyRef Name="Defnum"/>
+                </Key>
+                <Property Name="Devnum" Type="Edm.String" Nullable="false" MaxLength="16" sap:label="Item Number" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Itrnum" Type="Edm.String" Nullable="false" MaxLength="3" sap:label="Iteration Number" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="qcTr" Type="Edm.String" Nullable="false" MaxLength="20" sap:label="Char20" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="qcDesc" Type="Edm.String" Nullable="false" MaxLength="200" sap:label="Text" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Defnum" Type="Edm.String" Nullable="false" MaxLength="20" sap:label="Char20" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Status" Type="Edm.String" Nullable="false" MaxLength="30" sap:label="TR Approve status" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="qcATC" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Devnum"/>
+                    <PropertyRef Name="qcDefnum"/>
+                    <PropertyRef Name="qcAtcname"/>
+                    <PropertyRef Name="qcAtcuser"/>
+                </Key>
+                <Property Name="Devnum" Type="Edm.String" Nullable="false" MaxLength="16" sap:label="Item Number" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="qcDefnum" Type="Edm.String" Nullable="false" MaxLength="20" sap:label="Char20" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="qcAtcname" Type="Edm.String" Nullable="false" MaxLength="16" sap:label="c" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="qcAtcuser" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Character Field Length = 10" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="qcP1" Type="Edm.String" Nullable="false" MaxLength="5" sap:label="R/2 table" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="qcP2" Type="Edm.String" Nullable="false" MaxLength="5" sap:label="R/2 table" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="qcP3" Type="Edm.String" Nullable="false" MaxLength="5" sap:label="R/2 table" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="qcCname" Type="Edm.String" Nullable="false" MaxLength="20" sap:label="Char20" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="qcExemption" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Devnum"/>
+                    <PropertyRef Name="Defnum"/>
+                    <PropertyRef Name="qcAppuser"/>
+                    <PropertyRef Name="qcObjname"/>
+                </Key>
+                <Property Name="Devnum" Type="Edm.String" Nullable="false" MaxLength="16" sap:label="Item Number" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Defnum" Type="Edm.String" Nullable="false" MaxLength="20" sap:label="Char20" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="qcAppuser" Type="Edm.String" Nullable="false" MaxLength="12" sap:label="Applicant" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="qcObjname" Type="Edm.String" Nullable="false" MaxLength="40" sap:label="Object Name" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="qcReason" Type="Edm.String" Nullable="false" MaxLength="4" sap:label="Reason" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="qcApplComment" Type="Edm.String" Nullable="false" sap:label="Justification" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="qcApprover" Type="Edm.String" Nullable="false" MaxLength="12" sap:label="Approver" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="qcApprComment" Type="Edm.String" Nullable="false" sap:label="Justification" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="qcState" Type="Edm.String" Nullable="false" MaxLength="4" sap:label="Exemption State" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="qcIteration" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Devnum"/>
+                    <PropertyRef Name="Iterationtype"/>
+                    <PropertyRef Name="Itrnum"/>
+                </Key>
+                <Property Name="Devnum" Type="Edm.String" Nullable="false" MaxLength="16" sap:label="Item Number" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Iterationtype" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Iteration Type" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Itrnum" Type="Edm.String" Nullable="false" MaxLength="3" sap:label="Iteration Number" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Reason" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Reason" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Itrcomm" Type="Edm.String" Nullable="false" sap:label="Comments" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Zzdate" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Character Field Length = 10" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Zztime" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Character Field Length = 10" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Zzname" Type="Edm.String" Nullable="false" MaxLength="20" sap:label="Char20" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Itrdesc" Type="Edm.String" Nullable="false" MaxLength="40" sap:label="Text, 40 Characters Long" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Function" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Function Code" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="codeList" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Devnum"/>
+                </Key>
+                <Property Name="Devnum" Type="Edm.String" Nullable="false" MaxLength="16" sap:label="Item Number" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Wrwk" Type="Edm.String" Nullable="false" MaxLength="20" sap:label="WR/WK NUm" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Title" Type="Edm.String" Nullable="false" MaxLength="200" sap:label="ADT Title" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Devapproach" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Project Approach" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="RelKey" Type="Edm.String" Nullable="false" MaxLength="20" sap:label="Release key" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Rel" Type="Edm.String" Nullable="false" MaxLength="40" sap:label="Release" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Sapsystem" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="System" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Ricef" Type="Edm.String" Nullable="false" MaxLength="20" sap:label="RICEF Comp" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Estabapday" Type="Edm.String" Nullable="false" MaxLength="3" sap:label="ABAP Estimation Days" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Fsactrdate" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="FS Actual Receive Da" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Srleasemilestone" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="FS Milestone Date" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Fsnumiterations" Type="Edm.String" Nullable="false" MaxLength="2" sap:label="FS Iteration Number" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Fslink" Type="Edm.String" Nullable="false" sap:label="FS Link" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Tadlink" Type="Edm.String" Nullable="false" sap:label="TAD Link" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Targdevcomdate" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Plan Complete Date" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Actdevcomdate" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Actual Complete Date" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Tslink" Type="Edm.String" Nullable="false" sap:label="TS Link" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="TransportItr" Type="Edm.String" Nullable="false" MaxLength="2" sap:label="Transport Iteration" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="TransportCount" Type="Edm.String" Nullable="false" MaxLength="2" sap:label="Transport Counter" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Fa" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Functional Analyst" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Techlead" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Tech Lead" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Codereviewer" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Code Reviewer" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Overallsts" Type="Edm.String" Nullable="false" MaxLength="30" sap:label="Overall Status" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="reviewList" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Devnum"/>
+                </Key>
+                <Property Name="Devnum" Type="Edm.String" Nullable="false" MaxLength="16" sap:label="Item Number" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Wrwk" Type="Edm.String" Nullable="false" MaxLength="20" sap:label="WR/WK NUm" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Title" Type="Edm.String" Nullable="false" MaxLength="200" sap:label="ADT Title" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Fa" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Functional Analyst" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Techlead" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Tech Lead" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Developer" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Developer" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="RelKey" Type="Edm.String" Nullable="false" MaxLength="20" sap:label="Release key" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Rel" Type="Edm.String" Nullable="false" MaxLength="40" sap:label="Release" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Fslink" Type="Edm.String" Nullable="false" sap:label="FS Link" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Tslink" Type="Edm.String" Nullable="false" sap:label="TS Link" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Tadlink" Type="Edm.String" Nullable="false" sap:label="TAD Link" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Overallsts" Type="Edm.String" Nullable="false" MaxLength="30" sap:label="Overall Status" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="requestList" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Devnum"/>
+                </Key>
+                <Property Name="Devnum" Type="Edm.String" Nullable="false" MaxLength="16" sap:label="Item Number" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Wrwk" Type="Edm.String" Nullable="false" MaxLength="20" sap:label="WR/WK NUm" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Title" Type="Edm.String" Nullable="false" MaxLength="200" sap:label="ADT Title" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="RelKey" Type="Edm.String" Nullable="false" MaxLength="20" sap:label="Release key" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Rel" Type="Edm.String" Nullable="false" MaxLength="40" sap:label="Release" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Fsrleasemilestone" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="FS Milestone Date" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Fsactrdate" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="FS Actual Receive Da" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Fslink" Type="Edm.String" Nullable="false" sap:label="FS Link" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="TransportCount" Type="Edm.String" Nullable="false" MaxLength="2" sap:label="Transport Counter" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Techlead" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Tech Lead" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Developer" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Developer" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Overallsts" Type="Edm.String" Nullable="false" MaxLength="30" sap:label="Overall Status" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Sapsystem" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="System" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="transports" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Devnum"/>
+                    <PropertyRef Name="Itrnum"/>
+                    <PropertyRef Name="Tr"/>
+                </Key>
+                <Property Name="Devnum" Type="Edm.String" Nullable="false" MaxLength="16" sap:label="Item Number" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Itrnum" Type="Edm.String" Nullable="false" MaxLength="3" sap:label="Iteration Number" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Tr" Type="Edm.String" Nullable="false" MaxLength="20" sap:label="Tr Number" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Desc" Type="Edm.String" Nullable="false" MaxLength="200" sap:label="Text" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Defnum" Type="Edm.String" Nullable="false" MaxLength="20" sap:label="Defect Number" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Status" Type="Edm.String" Nullable="false" MaxLength="30" sap:label="TR Status" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="designItem" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Devnum"/>
+                </Key>
+                <Property Name="Devnum" Type="Edm.String" Nullable="false" MaxLength="16" sap:label="Item Number" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Overallsts" Type="Edm.String" Nullable="false" MaxLength="30" sap:label="Overall Status" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Wrwk" Type="Edm.String" Nullable="false" MaxLength="20" sap:label="WR/WK NUm" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Title" Type="Edm.String" Nullable="false" MaxLength="200" sap:label="ADT Title" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="RelKey" Type="Edm.String" Nullable="false" MaxLength="20" sap:label="Release key" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Rel" Type="Edm.String" Nullable="false" MaxLength="40" sap:label="Release" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Sapsystem" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="System" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Ricef" Type="Edm.String" Nullable="false" MaxLength="20" sap:label="RICEF Comp" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Estabapday" Type="Edm.String" Nullable="false" MaxLength="3" sap:label="ABAP Estimation Days" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Fsrleasemilestone" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="FS Milestone Date" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Fsactrdate" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="FS Actual Receive Da" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Fsnumiterations" Type="Edm.String" Nullable="false" MaxLength="2" sap:label="FS Iteration Number" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Fslink" Type="Edm.String" Nullable="false" sap:label="FS Link" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Tadlink" Type="Edm.String" Nullable="false" sap:label="TAD Link" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Targdevcomdate" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Plan Complete Date" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Fa" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Functional Analyst" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Teamlead" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Team Lead" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="fsIteration" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Devnum"/>
+                    <PropertyRef Name="Iterationtype"/>
+                    <PropertyRef Name="Itrnum"/>
+                </Key>
+                <Property Name="Devnum" Type="Edm.String" Nullable="false" MaxLength="16" sap:label="Item Number" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Iterationtype" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Iteration Type" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Itrnum" Type="Edm.String" Nullable="false" MaxLength="3" sap:label="Iteration Number" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Reason" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Reason" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Itrcomm" Type="Edm.String" Nullable="false" sap:label="Comments" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Zzdate" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Character Field Length = 10" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Zztime" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Character Field Length = 10" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Zzname" Type="Edm.String" Nullable="false" MaxLength="20" sap:label="Char20" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Itrdesc" Type="Edm.String" Nullable="false" MaxLength="40" sap:label="Text, 40 Characters Long" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="transportList" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Tr"/>
+                </Key>
+                <Property Name="Tr" Type="Edm.String" Nullable="false" MaxLength="20" sap:label="Tr Number" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Desc" Type="Edm.String" Nullable="false" MaxLength="200" sap:label="Text" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Status" Type="Edm.String" Nullable="false" MaxLength="30" sap:label="TR Approve Status" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="TrType" Type="Edm.String" Nullable="false" MaxLength="45" sap:label="Type of request/task" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="TrStatus" Type="Edm.String" Nullable="false" MaxLength="20" sap:label="Status of request/task" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="TrOwner" Type="Edm.String" Nullable="false" MaxLength="12" sap:label="Owner of request/task" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="TargetSystem" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Transport Target of Request" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="DevNum" Type="Edm.String" Nullable="false" MaxLength="16" sap:label="Item number" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="ActivityHelp" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="NetworkNumber"/>
+                    <PropertyRef Name="ActivityNumber"/>
+                </Key>
+                <Property Name="NetworkNumber" Type="Edm.String" Nullable="false" MaxLength="12" sap:label="Order" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ActivityNumber" Type="Edm.String" Nullable="false" MaxLength="4" sap:label="Oper./Act." sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ActivityDescription" Type="Edm.String" Nullable="false" MaxLength="40" sap:label="Opr. short text" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="networkActivityHelp" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="NetworkNumber"/>
+                    <PropertyRef Name="ActivityNumber"/>
+                </Key>
+                <Property Name="CompanyCode" Type="Edm.String" Nullable="false" MaxLength="4" sap:label="Company Code" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Plant" Type="Edm.String" Nullable="false" MaxLength="4" sap:label="Plant" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ProjectNumber" Type="Edm.String" Nullable="false" MaxLength="24" sap:label="Project number" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ProjectDescription" Type="Edm.String" Nullable="false" MaxLength="40" sap:label="Project description" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ResponsiblePerson" Type="Edm.String" Nullable="false" MaxLength="25" sap:label="Responsible person" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="NetworkNumber" Type="Edm.String" Nullable="false" MaxLength="12" sap:label="Network number" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="NetworkDescription" Type="Edm.String" Nullable="false" MaxLength="40" sap:label="Network description" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ActivityNumber" Type="Edm.String" Nullable="false" MaxLength="4" sap:label="Activity number" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ActivityDescription" Type="Edm.String" Nullable="false" MaxLength="40" sap:label="Activity description" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="UserDefField" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="User-def. field" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="networkHelp" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Network"/>
+                </Key>
+                <Property Name="Network" Type="Edm.String" Nullable="false" MaxLength="12" sap:label="Network" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Description" Type="Edm.String" Nullable="false" MaxLength="40" sap:label="Description" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <Association Name="listToIterations" sap:content-version="1">
+                <End Type="ZADSAP_SRV.devItems" Multiplicity="1" Role="FromRole_listToIterations"/>
+                <End Type="ZADSAP_SRV.iterations" Multiplicity="*" Role="ToRole_listToIterations"/>
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_listToIterations">
+                        <PropertyRef Name="itmNum"/>
+                    </Principal>
+                    <Dependent Role="ToRole_listToIterations">
+                        <PropertyRef Name="itmNum"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="listToFeeds" sap:content-version="1">
+                <End Type="ZADSAP_SRV.devItems" Multiplicity="1" Role="FromRole_listToFeeds"/>
+                <End Type="ZADSAP_SRV.feeds" Multiplicity="*" Role="ToRole_listToFeeds"/>
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_listToFeeds">
+                        <PropertyRef Name="itmNum"/>
+                    </Principal>
+                    <Dependent Role="ToRole_listToFeeds">
+                        <PropertyRef Name="Devnum"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="listToCodeReviewIteration" sap:content-version="1">
+                <End Type="ZADSAP_SRV.devItems" Multiplicity="1" Role="FromRole_listToCodeReviewIteration"/>
+                <End Type="ZADSAP_SRV.crIteration" Multiplicity="*" Role="ToRole_listToCodeReviewIteration"/>
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_listToCodeReviewIteration">
+                        <PropertyRef Name="itmNum"/>
+                    </Principal>
+                    <Dependent Role="ToRole_listToCodeReviewIteration">
+                        <PropertyRef Name="Devnum"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="listToQCDefects" sap:content-version="1">
+                <End Type="ZADSAP_SRV.devItems" Multiplicity="1" Role="FromRole_listToQCDefects"/>
+                <End Type="ZADSAP_SRV.qcDefects" Multiplicity="*" Role="ToRole_listToQCDefects"/>
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_listToQCDefects">
+                        <PropertyRef Name="itmNum"/>
+                    </Principal>
+                    <Dependent Role="ToRole_listToQCDefects">
+                        <PropertyRef Name="Devnum"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="listToQCTR" sap:content-version="1">
+                <End Type="ZADSAP_SRV.devItems" Multiplicity="1" Role="FromRole_listToQCTR"/>
+                <End Type="ZADSAP_SRV.qcTRList" Multiplicity="*" Role="ToRole_listToQCTR"/>
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_listToQCTR">
+                        <PropertyRef Name="itmNum"/>
+                    </Principal>
+                    <Dependent Role="ToRole_listToQCTR">
+                        <PropertyRef Name="Devnum"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="listToQCATC" sap:content-version="1">
+                <End Type="ZADSAP_SRV.devItems" Multiplicity="1" Role="FromRole_listToQCATC"/>
+                <End Type="ZADSAP_SRV.qcATC" Multiplicity="*" Role="ToRole_listToQCATC"/>
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_listToQCATC">
+                        <PropertyRef Name="itmNum"/>
+                    </Principal>
+                    <Dependent Role="ToRole_listToQCATC">
+                        <PropertyRef Name="Devnum"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="listToQCExemptions" sap:content-version="1">
+                <End Type="ZADSAP_SRV.devItems" Multiplicity="1" Role="FromRole_listToQCExemptions"/>
+                <End Type="ZADSAP_SRV.qcExemption" Multiplicity="*" Role="ToRole_listToQCExemptions"/>
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_listToQCExemptions">
+                        <PropertyRef Name="itmNum"/>
+                    </Principal>
+                    <Dependent Role="ToRole_listToQCExemptions">
+                        <PropertyRef Name="Devnum"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="listToQCITR" sap:content-version="1">
+                <End Type="ZADSAP_SRV.devItems" Multiplicity="1" Role="FromRole_listToQCITR"/>
+                <End Type="ZADSAP_SRV.qcIteration" Multiplicity="*" Role="ToRole_listToQCITR"/>
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_listToQCITR">
+                        <PropertyRef Name="itmNum"/>
+                    </Principal>
+                    <Dependent Role="ToRole_listToQCITR">
+                        <PropertyRef Name="Devnum"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="listToTransport" sap:content-version="1">
+                <End Type="ZADSAP_SRV.devItems" Multiplicity="1" Role="FromRole_listToTransport"/>
+                <End Type="ZADSAP_SRV.transports" Multiplicity="*" Role="ToRole_listToTransport"/>
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_listToTransport">
+                        <PropertyRef Name="itmNum"/>
+                    </Principal>
+                    <Dependent Role="ToRole_listToTransport">
+                        <PropertyRef Name="Devnum"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="listToFSIteration" sap:content-version="1">
+                <End Type="ZADSAP_SRV.devItems" Multiplicity="1" Role="FromRole_listToFSIteration"/>
+                <End Type="ZADSAP_SRV.fsIteration" Multiplicity="*" Role="ToRole_listToFSIteration"/>
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_listToFSIteration">
+                        <PropertyRef Name="itmNum"/>
+                    </Principal>
+                    <Dependent Role="ToRole_listToFSIteration">
+                        <PropertyRef Name="Devnum"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="listToATC" sap:content-version="1">
+                <End Type="ZADSAP_SRV.devItems" Multiplicity="1" Role="FromRole_listToATC"/>
+                <End Type="ZADSAP_SRV.atcList" Multiplicity="*" Role="ToRole_listToATC"/>
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_listToATC">
+                        <PropertyRef Name="itmNum"/>
+                    </Principal>
+                    <Dependent Role="ToRole_listToATC">
+                        <PropertyRef Name="Devnum"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="listToExemption" sap:content-version="1">
+                <End Type="ZADSAP_SRV.devItems" Multiplicity="1" Role="FromRole_listToExemption"/>
+                <End Type="ZADSAP_SRV.exempList" Multiplicity="*" Role="ToRole_listToExemption"/>
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_listToExemption">
+                        <PropertyRef Name="itmNum"/>
+                    </Principal>
+                    <Dependent Role="ToRole_listToExemption">
+                        <PropertyRef Name="Devnum"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="listToObjects" sap:content-version="1">
+                <End Type="ZADSAP_SRV.devItems" Multiplicity="1" Role="FromRole_listToObjects"/>
+                <End Type="ZADSAP_SRV.objectList" Multiplicity="*" Role="ToRole_listToObjects"/>
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_listToObjects">
+                        <PropertyRef Name="itmNum"/>
+                    </Principal>
+                    <Dependent Role="ToRole_listToObjects">
+                        <PropertyRef Name="itmNum"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <EntityContainer Name="ZADSAP_SRV_Entities" m:IsDefaultEntityContainer="true" sap:supported-formats="atom json xlsx">
+                <EntitySet Name="devItemsSet" EntityType="ZADSAP_SRV.devItems" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+                <EntitySet Name="objectListSet" EntityType="ZADSAP_SRV.objectList" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+                <EntitySet Name="iterationsSet" EntityType="ZADSAP_SRV.iterations" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+                <EntitySet Name="userRolesSet" EntityType="ZADSAP_SRV.userRoles" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+                <EntitySet Name="appConfigurationSet" EntityType="ZADSAP_SRV.appConfiguration" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+                <EntitySet Name="feedsSet" EntityType="ZADSAP_SRV.feeds" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+                <EntitySet Name="headerAnalysisSet" EntityType="ZADSAP_SRV.headerAnalysis" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+                <EntitySet Name="atcListSet" EntityType="ZADSAP_SRV.atcList" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+                <EntitySet Name="exempListSet" EntityType="ZADSAP_SRV.exempList" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+                <EntitySet Name="crIterationSet" EntityType="ZADSAP_SRV.crIteration" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+                <EntitySet Name="qcDefectsSet" EntityType="ZADSAP_SRV.qcDefects" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+                <EntitySet Name="qcTRListSet" EntityType="ZADSAP_SRV.qcTRList" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+                <EntitySet Name="qcATCSet" EntityType="ZADSAP_SRV.qcATC" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+                <EntitySet Name="qcExemptionSet" EntityType="ZADSAP_SRV.qcExemption" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+                <EntitySet Name="qcIterationSet" EntityType="ZADSAP_SRV.qcIteration" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+                <EntitySet Name="codeListSet" EntityType="ZADSAP_SRV.codeList" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+                <EntitySet Name="reviewListSet" EntityType="ZADSAP_SRV.reviewList" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+                <EntitySet Name="requestListSet" EntityType="ZADSAP_SRV.requestList" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+                <EntitySet Name="transportsSet" EntityType="ZADSAP_SRV.transports" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+                <EntitySet Name="designItemSet" EntityType="ZADSAP_SRV.designItem" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+                <EntitySet Name="fsIterationSet" EntityType="ZADSAP_SRV.fsIteration" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+                <EntitySet Name="transportListSet" EntityType="ZADSAP_SRV.transportList" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+                <EntitySet Name="ActivityHelpSet" EntityType="ZADSAP_SRV.ActivityHelp" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+                <EntitySet Name="networkActivityHelpSet" EntityType="ZADSAP_SRV.networkActivityHelp" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+                <EntitySet Name="networkHelpSet" EntityType="ZADSAP_SRV.networkHelp" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+                <AssociationSet Name="listToIterationsSet" Association="ZADSAP_SRV.listToIterations" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="devItemsSet" Role="FromRole_listToIterations"/>
+                    <End EntitySet="iterationsSet" Role="ToRole_listToIterations"/>
+                </AssociationSet>
+                <AssociationSet Name="listToCodeReviewIterationSet" Association="ZADSAP_SRV.listToCodeReviewIteration" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="devItemsSet" Role="FromRole_listToCodeReviewIteration"/>
+                    <End EntitySet="crIterationSet" Role="ToRole_listToCodeReviewIteration"/>
+                </AssociationSet>
+                <AssociationSet Name="listToQCATCSet" Association="ZADSAP_SRV.listToQCATC" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="devItemsSet" Role="FromRole_listToQCATC"/>
+                    <End EntitySet="qcATCSet" Role="ToRole_listToQCATC"/>
+                </AssociationSet>
+                <AssociationSet Name="listToExemptionSet" Association="ZADSAP_SRV.listToExemption" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="devItemsSet" Role="FromRole_listToExemption"/>
+                    <End EntitySet="exempListSet" Role="ToRole_listToExemption"/>
+                </AssociationSet>
+                <AssociationSet Name="listToQCExemptionsSet" Association="ZADSAP_SRV.listToQCExemptions" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="devItemsSet" Role="FromRole_listToQCExemptions"/>
+                    <End EntitySet="qcExemptionSet" Role="ToRole_listToQCExemptions"/>
+                </AssociationSet>
+                <AssociationSet Name="listToATCSet" Association="ZADSAP_SRV.listToATC" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="devItemsSet" Role="FromRole_listToATC"/>
+                    <End EntitySet="atcListSet" Role="ToRole_listToATC"/>
+                </AssociationSet>
+                <AssociationSet Name="listToFSIterationSet" Association="ZADSAP_SRV.listToFSIteration" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="devItemsSet" Role="FromRole_listToFSIteration"/>
+                    <End EntitySet="fsIterationSet" Role="ToRole_listToFSIteration"/>
+                </AssociationSet>
+                <AssociationSet Name="listToQCTRSet" Association="ZADSAP_SRV.listToQCTR" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="devItemsSet" Role="FromRole_listToQCTR"/>
+                    <End EntitySet="qcTRListSet" Role="ToRole_listToQCTR"/>
+                </AssociationSet>
+                <AssociationSet Name="listToObjectsSet" Association="ZADSAP_SRV.listToObjects" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="devItemsSet" Role="FromRole_listToObjects"/>
+                    <End EntitySet="objectListSet" Role="ToRole_listToObjects"/>
+                </AssociationSet>
+                <AssociationSet Name="listToTransportSet" Association="ZADSAP_SRV.listToTransport" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="devItemsSet" Role="FromRole_listToTransport"/>
+                    <End EntitySet="transportsSet" Role="ToRole_listToTransport"/>
+                </AssociationSet>
+                <AssociationSet Name="listToQCITRSet" Association="ZADSAP_SRV.listToQCITR" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="devItemsSet" Role="FromRole_listToQCITR"/>
+                    <End EntitySet="qcIterationSet" Role="ToRole_listToQCITR"/>
+                </AssociationSet>
+                <AssociationSet Name="listToFeedsSet" Association="ZADSAP_SRV.listToFeeds" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="devItemsSet" Role="FromRole_listToFeeds"/>
+                    <End EntitySet="feedsSet" Role="ToRole_listToFeeds"/>
+                </AssociationSet>
+                <AssociationSet Name="listToQCDefectsSet" Association="ZADSAP_SRV.listToQCDefects" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="devItemsSet" Role="FromRole_listToQCDefects"/>
+                    <End EntitySet="qcDefectsSet" Role="ToRole_listToQCDefects"/>
+                </AssociationSet>
+            </EntityContainer>
+            <atom:link
+                xmlns:atom="http://www.w3.org/2005/Atom" rel="self" href="./sap/ZADSAP_SRV/$metadata"/>
+                <atom:link
+                    xmlns:atom="http://www.w3.org/2005/Atom" rel="latest-version" href="./sap/ZADSAP_SRV/$metadata"/>
+                </Schema>
+            </edmx:DataServices>
+        </edmx:Edmx>
